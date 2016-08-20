@@ -9,12 +9,17 @@ main {
 }
 
 footer {
+    margin-top: 20px;
     background-color: #353535;
     padding: 20px;
 }
 
 .center {
     text-align: center;
+}
+
+.left {
+    text-align: left;
 }
 
 #logo-container {
@@ -28,24 +33,31 @@ footer {
     width: auto\9; /* ie8 */
 }
 
+#title-text {
+    font-size: 1.5em;
+}
+
 /*Sliding tabs nav*/
-.nav-container * {
+.tab-container * {
     box-sizing: border-box;
 }
 
-.nav-container {
+.tab-container {
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
 }
 
-.nav-container ul li {
+.tab-container label {
     display: inline;
     text-align: center;
 }
 
-.nav-container a {
-    font-size: 1.5em;
+.tab-container input[type=radio] {
+    display:none;
+}
+
+.tab-container > label {
     color: #dcedff;
     display: inline-block;
     width: 20%;
@@ -54,27 +66,140 @@ footer {
     text-decoration: none;
 }
 
-.nav-two:hover ~ hr {
-    margin-left: 20%;
-}
-
-.nav-three:hover ~ hr {
-    margin-left: 40%;
-}
-
-.nav-four:hover ~ hr {
-    margin-left: 60%;
-}
-
-.nav-five:hover ~ hr {
-    margin-left: 80%;
-}
-
-.nav-container hr {
+.tab-container #tab-indicator {
     height: .25rem;
     width: 20%;
     margin: 0;
     background: #029ddd;
     border: none;
     transition: .3s ease-in-out;
+}
+
+.tab-text {
+    width: 100%;
+    display: none !important;
+}
+
+/* Showing which tab is selected or about to be*/
+#tab1:checked ~ hr {
+    margin-left: 0%;
+}
+
+#tab2:checked ~ hr {
+    margin-left: 20%;
+}
+
+#tab3:checked ~ hr {
+    margin-left: 40%;
+}
+
+#tab4:checked ~ hr {
+    margin-left: 60%;
+}
+
+#tab5:checked ~ hr {
+    margin-left: 80%;
+}
+
+#lbl-tab1:hover ~ hr{
+    margin-left: 0%;
+}
+
+#lbl-tab2:hover ~ hr{
+    margin-left: 20%;
+}
+
+#lbl-tab3:hover ~ hr{
+    margin-left: 40%;
+}
+
+#lbl-tab4:hover ~ hr{
+    margin-left: 60%;
+}
+
+#lbl-tab5:hover ~ hr{
+    margin-left: 80%;
+}
+/* Color the hr on click */
+[id^='lbl-tab']:active ~ hr{
+    background: tomato;
+}
+
+/*Hiding/Showing the tabs*/
+.tab-content {
+    background: #353535;
+    margin-top: 20px;
+    display: none;
+    overflow: hidden;
+}
+
+.tab-content > div {
+        padding: 20px;
+}
+
+#tab1:checked ~ div #tab-content1,
+#tab2:checked ~ div #tab-content2,
+#tab3:checked ~ div #tab-content3,
+#tab4:checked ~ div #tab-content4,
+#tab5:checked ~ div #tab-content5 {
+    display: block;
+}
+
+/*Styling within tabs*/
+.border-right {
+    border-right: 1px solid #181f1c;
+    height: 100%;
+}
+
+input, textarea {
+    color: #181f1c;
+}
+
+.hidden {
+    display: none;
+}
+
+#contact-form-submission {
+    padding: 200px 0px;
+}
+
+fieldset {
+    border: none;
+}
+
+#contact-form fieldset input, #contact-form fieldset textarea {
+    width: 100%;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    /*Show full tab names when larger than 750px*/
+    .tab-text {
+        display: inline-block !important;
+    }
+
+    .tab-icon {
+        display: none !important;
+    }
+
+    #title-text {
+        font-size: 2em;
+    }
+
+    .hide-big {
+        display: none;
+    }
+
+    #contact-form fieldset input, #contact-form fieldset textarea {
+        width: 50%;
+    }
+
+    .pad-both-sides {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .fifth-pad-left {
+        padding-left: 20%;
+    }
 }

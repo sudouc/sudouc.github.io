@@ -37,29 +37,143 @@
             <!--Title Text-->
             <div class="row">
                 <div class="twelve columns center">
-                    <h1>Student Developer Organisation @ UC</h1>
+                    <h1 id="title-text">Student Developer Organisation @ UC</h1>
                 </div>
             </div>
 
-            <!--Navigation Links-->
-            <div class="row">
-                <div class="twelve columns">
-                    <div class="nav-container">
-                        <ul>
-                            <li class="nav-one"><a href="#">Hello World</a></li><!--
-                            --><li class="nav-two"><a href="#">About</a></li><!--
-                            --><li class="nav-three"><a href="#">Projects</a></li><!--
-                            --><li class="nav-four"><a href="#">Events</a></li><!--
-                            --><li class="nav-five"><a href="#">Contact</a></li>
+            <!--Tabs-->
+            <div class="tab-container">
+
+                <input type="radio" name="tabs" id="tab1" checked><label id="lbl-tab1" for="tab1"><span><span class="tab-icon glyphicon glyphicon-home" aria-hidden="true"></span><span class="tab-text">Hello World</span></span></label><!--
+            --><input type="radio" name="tabs" id="tab2"><label id="lbl-tab2" for="tab2"><span><span class="tab-icon glyphicon glyphicon-console" aria-hidden="true"></span><span class="tab-text">About</span></span></label><!--
+            --><input type="radio" name="tabs" id="tab3"><label id="lbl-tab3" for="tab3"><span><span class="tab-icon glyphicon glyphicon-tasks" aria-hidden="true"></span><span class="tab-text">Projects</span></span></label><!--
+            --><input type="radio" name="tabs" id="tab4"><label id="lbl-tab4" for="tab4"><span><span class="tab-icon glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="tab-text">Events</span></span></label><!--
+            --><input type="radio" name="tabs" id="tab5"><label id="lbl-tab5" for="tab5"><span><span class="tab-icon glyphicon glyphicon-comment" aria-hidden="true"></span><span class="tab-text">Contact</span></span></label>
+                <hr id="tab-indicator" />
+
+                <!--Tab Body-->
+                <div class="row">
+                    <div id="tab-content1" class="tab-content">
+                        <div class="six columns center border-right">
+                            <h3>Our Mission</h3>
+                            <p>To Develop. That’s it. Whether it’s your app, the next Facebook, or a less hackable Census, the
+                                UC Student Developer Organisation exists for you. </p>
+
                             <hr />
-                        </ul>
+
+                            <h3>Goals</h3>
+                            <ul>
+                                <li>Engage student developers in real world development practices</li>
+                                <li>Encourage the initiation and team development of open-source and proprietary projects around
+                                    the university</li>
+                            </ul>
+                        </div>
+                        <div class="six columns center">
+                            <hr class="hide-big" />
+                            <h3>What's on</h3>
+                            <p>Our IGM is happening on the 26th of August 2016 at the University Of Canberra</p>
+                            <a class="button button-primary" href="https://www.facebook.com/events/228609840874073/">See the Event</a>
+                        </div>
                     </div>
+                    <!-- #tab-content1 -->
+                    <div id="tab-content2" class="tab-content">
+                        <div class="twelve columns center">
+                            <div class="pad-both-sides">
+                                <h3>About Us</h3>
+                                <p>Our Business Plan is currently open for review, feel free to check it out:</p>
+                                <a class="button  button-primary" href="https://paper.dropbox.com/doc/Student-Developer-Organisation-Business-Plan-gLNxHg1ryb98pBSx30j0B">Take A Look</a>
+                                <br><br>
+                                <p>SUDO is a new society at the University of Canberra, we’re focused on innovation, planning &
+                                    development and actual implementation in the technology sector.</p>
+                                <p>We aim to be an entity to which members can belong and feel like they’re not on their own in
+                                    pursuing their projects or to connect them with existing projects.</p>
+                                <p>While primarily for STEM students for obvious reasons we aim to impact the UC Community as a
+                                    whole through proposed campus interactivity and society tooling projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #tab-content2 -->
+                    <div id="tab-content3" class="tab-content">
+                        <div class="twelve columns center">
+                            <div class="pad-both-sides">
+                                <h3>Projects</h3>
+                                <p>SUDO is really new - we’re still in the stages of setting everything up and sorting out who does
+                                    what.
+                                </p>
+                                <p>Here’s a just a few things we plan to do:</p>
+                                <ul class="left fifth-pad-left">
+                                    <li>Society Tooling
+                                        <ul>
+                                            <li>Member Management/Status/Renewal</li>
+                                            <li>Member messaging, sign up with social ID's and/or uni email</li>
+                                        </ul>
+                                    </li>
+                                    <li>Campus Interactivity
+                                        <ul>
+                                            <li>Piano Staircase</li>
+                                            <li>Streaming Campus Pianos</li>
+                                            <li>Campus mood lighting based on #weareuc</li>
+                                        </ul>
+                                    </li>
+                                    <li>Student Life
+                                        <ul>
+                                            <li>Free Period Matcher</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p>Think you'd like to get involved? <a><label id="lbl-tab2" for="tab5">Contact Us</label></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #tab-content3 -->
+                    <div id="tab-content4" class="tab-content">
+                        <div class="twelve column center">
+                            <h3>Events</h3>
+                        </div>
+                        <div class="six columns center">
+                            <div style="overflow: auto; -webkit-overflow-scrolling: touch;">
+                                <div style="min-height: 101%">
+                                    <!--Just before this you saw a horribly dirty solution for iOS scrolling iframe, see: http://stackoverflow.com/questions/32897960/ios-9-webkit-overflow-scrollingtouch-and-overflow-scroll-breaks-scrolling-->
+                                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsudouc%2Fposts%2F1064742863594857&width=350"
+                                        width="350" height="563" style="border:none;overflow:hidden;min-width:351px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #tab-content4 -->
+                    <div id="tab-content5" class="tab-content">
+                        <div class="twelve columns center">
+                            <h3>Contact</h3>
+                            <h4 id="contact-form-submission" class="hidden">Thanks! We'll be in touch :)</h4>
+                            <!--This script tag and iframe are so that we can NOT show the google response for the form submission, the form submission triggers the iframe to reload-->
+                            <script type="text/javascript">var submitted=false;</script>
+                            <iframe name="hidden_iframe" id="hidden_iframe" class="hidden" onload="if(submitted){hideForm()}"></iframe>
+
+                            <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfYcJa1HIz6zyynuNmefxN-tH0wRZrWDubq3UcNA0lEudCQeg/formResponse" method="post"
+                                target="hidden_iframe" onsubmit="submitted=true;">
+                                <fieldset>
+                                    <input id="name-input" type="text" autocomplete="off" tabindex="0" name="Contact SUDO" value="" placeholder="name" required>
+                                    <!--I know these echo inputs look REALLY weird - but this is required for the google forms submission, check out http://morning.am/tutorials/how-to-style-google-forms/ for an idea on what I'm doing '-->
+                                    <input class="hidden" id="name-input-echo" name="entry.1456279547">
+                                </fieldset>
+
+                                <fieldset>
+                                    <input id="email-input" type="email" autocomplete="off" tabindex="0" name="Contact SUDO" value="" placeholder="email" required>
+                                    <input class="hidden" id="email-input-echo" name="entry.46076552">
+                                </fieldset>
+
+                                <fieldset>
+                                    <textarea id="message-input" name="Contact SUDO" placeholder="message" required></textarea>
+                                    <input class="hidden" id="message-input-echo" name="entry.590767412">
+                                </fieldset>
+                                
+                                <input class="button button-primary" type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- #tab-content5 -->
                 </div>
             </div>
-
-            <!--Tab Body-->
-
-
         </div>
     </main>
 
