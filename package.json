@@ -1,6 +1,6 @@
 {
   "name": "sudouc.github.io",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Website for the Student Developer Organisation at the University of Canberra",
   "main": "index.html",
   "dependencies": {
