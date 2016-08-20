@@ -1,0 +1,26 @@
+{
+  "name": "sudouc.github.io",
+  "version": "1.0.0",
+  "description": "Website for the Student Developer Organisation at the University of Canberra",
+  "main": "index.html",
+  "dependencies": {
+    "skeleton-css": "^2.0.4"
+  },
+  "devDependencies": {
+    "connect": "^3.4.1",
+    "serve-static": "^1.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudouc/sudouc.github.io.git"
+  },
+  "author": "Alisdair Robertson (robodair)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sudouc/sudouc.github.io/issues"
+  },
+  "homepage": "https://github.com/sudouc/sudouc.github.io#readme"
+}
