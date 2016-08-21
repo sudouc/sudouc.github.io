@@ -22,6 +22,28 @@ footer {
     text-align: left;
 }
 
+.justify {
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+ul {
+    list-style: disc outside none;
+    margin-left: 1em;
+    text-align: left;
+}
+
+li {
+   margin-left: 1em;
+}
+
+p {
+    text-align: left;
+}
+
 #logo-container {
     padding: 0 25%;
 }
