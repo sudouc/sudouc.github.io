@@ -1,205 +1,141 @@
-html, body {
-    height: 100%;
-    color: #dcedff;
-    background-color: #181f1c;
-}
-
-main {
-    min-height: 100%;
-}
-
-footer {
-    margin-top: 20px;
-    background-color: #353535;
-    padding: 20px;
-}
-
 .center {
     text-align: center;
 }
 
-.left {
-    text-align: left;
+/* Paralax Group Styling
+  --------------------------------------------- */
+
+/*JUMBOTRON*/
+
+#group1 {
+    z-index: -500;
+    /* behind group 2 */
+    height: 70vh;
+    top: calc(70vh/-2);
 }
 
-#logo-container {
-    padding: 0 25%;
+#group1 * {
+    color: white;
+    border: 1px solid red;
 }
 
-#logo {
-    max-width: 100%;
-    max-height: 250px;
-    height: auto;
-    width: auto\9; /* ie8 */
+#jumbotron-content {
+    margin-top: 10vh;
 }
 
-#title-text {
-    font-size: 1.5em;
+#jumbotron-logo {
+    width: 30vh;
 }
 
-/*Sliding tabs nav*/
-.tab-container * {
-    box-sizing: border-box;
+#group1 .parallax__layer--deep {
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
 }
 
-.tab-container {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
+/*/JUMBOTRON*/
+
+/* First Content */
+#group2 {
+    z-index: 0;
+    height: 50vh;
+    /* In front of group1 */
 }
 
-.tab-container label {
-    display: inline;
-    text-align: center;
+#group2 * {
+    border: 1px solid blue;
 }
 
-.tab-container input[type=radio] {
-    display:none;
+#group2 .parallax__layer--base {
+    background: whitesmoke;
 }
 
-.tab-container > label {
-    color: #dcedff;
-    display: inline-block;
-    width: 20%;
-    padding: .75rem 0;
-    margin: 0;
-    text-decoration: none;
+/* /First Content */
+
+/* First Space */
+
+#group3 {
+    z-index: -100;
+    /*behind group1 */
+    height: 25vh;
+    /*Quarter Viewport height*/
 }
 
-.tab-container #tab-indicator {
-    height: .25rem;
-    width: 20%;
-    margin: 0;
-    background: #029ddd;
-    border: none;
-    transition: .3s ease-in-out;
+#group3 * {
+    border: 1px solid orange;
 }
 
-.tab-text {
-    width: 100%;
-    display: none !important;
+#group3 .parallax__layer--deep {
+    background: radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+    background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+    background-color: #840b2a;
 }
 
-/* Showing which tab is selected or about to be*/
-#tab1:checked ~ hr {
-    margin-left: 0%;
+/* /First Space */
+
+/* Second Content */
+
+#group4 {
+    z-index: 0;
+    /*in front of group3*/
 }
 
-#tab2:checked ~ hr {
-    margin-left: 20%;
+#group4 * {
+    border: 1px solid brown;
 }
 
-#tab3:checked ~ hr {
-    margin-left: 40%;
+#group4 .parallax__layer--base {
+    background: brown;
 }
 
-#tab4:checked ~ hr {
-    margin-left: 60%;
+/* /Second Content */
+
+#group5 {
+    z-index: 0;
+    /* slide over group 4 and 6 */
 }
 
-#tab5:checked ~ hr {
-    margin-left: 80%;
+#group5 * {
+    border: 1px solid purple;
 }
 
-#lbl-tab1:hover ~ hr{
-    margin-left: 0%;
+#group5 .parallax__layer--base {
+    background: rgb(214,229,100);
 }
 
-#lbl-tab2:hover ~ hr{
-    margin-left: 20%;
+#group6 {
+    z-index: 0;
+    /* slide under group 5 and 7 */
 }
 
-#lbl-tab3:hover ~ hr{
-    margin-left: 40%;
+#group6 * {
+    border: 1px solid lightcoral;
 }
 
-#lbl-tab4:hover ~ hr{
-    margin-left: 60%;
+#group6 .parallax__layer--back {
+    background: rgb(245,235,100);
 }
 
-#lbl-tab5:hover ~ hr{
-    margin-left: 80%;
-}
-/* Color the hr on click */
-[id^='lbl-tab']:active ~ hr{
-    background: tomato;
+#group7 {
+    z-index: 0;
+    /* slide over group 7 */
 }
 
-/*Hiding/Showing the tabs*/
-.tab-content {
-    background: #353535;
-    margin-top: 20px;
-    display: none;
-    overflow: hidden;
+#group7 * {
+    border: 1px solid turquoise;
 }
 
-.tab-content > div {
-        padding: 20px;
-}
-
-#tab1:checked ~ div #tab-content1,
-#tab2:checked ~ div #tab-content2,
-#tab3:checked ~ div #tab-content3,
-#tab4:checked ~ div #tab-content4,
-#tab5:checked ~ div #tab-content5 {
-    display: block;
-}
-
-/*Styling within tabs*/
-.border-right {
-    border-right: 1px solid #181f1c;
-    height: 100%;
-}
-
-input, textarea {
-    color: #181f1c;
-}
-
-.hidden {
-    display: none;
-}
-
-#contact-form-submission {
-    padding: 200px 0px;
-}
-
-fieldset {
-    border: none;
-}
-
-#contact-form fieldset input, #contact-form fieldset textarea {
-    width: 100%;
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-    /*Show full tab names when larger than 750px*/
-    .tab-text {
-        display: inline-block !important;
-    }
-
-    .tab-icon {
-        display: none !important;
-    }
-
-    #title-text {
-        font-size: 2em;
-    }
-
-    .hide-big {
-        display: none;
-    }
-
-    #contact-form fieldset input, #contact-form fieldset textarea {
-        width: 50%;
-    }
-
-    .pad-both-sides {
-        padding-left: 20%;
-        padding-right: 20%;
-    }
-
-    .fifth-pad-left {
-        padding-left: 20%;
-    }
+#group7 .parallax__layer--base {
+    background: rgb(255,241,100);
 }
