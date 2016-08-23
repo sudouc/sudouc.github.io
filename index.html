@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>sudo @ uc</title>
+    <title>UC Student Developer Organisation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,10 +16,9 @@
 </head>
 
 <body>
-    <div class="debug">
-        <label><input type="checkbox"> Debug</label>
+    <div class="debug hidden">
+        <label><input id="debug-checkbox" type="checkbox">3D</label>
     </div>
-
     <div class="parallax" id="parallax">
 
         <div id="group1" class="parallax__group">
@@ -32,7 +31,7 @@
                                 <img id="jumbotron-logo" src="/images/sudo_logo_web.png">
                             </div>
                             <div class="six columns">
-                                <h1>University of Canberra Student Developer Organisation</h1>
+                                <h1>University of Canberra<br>Student Developer Organisation</h1>
                                 <a class="button button-primary" href="https://www.facebook.com/events/228609840874073/">Sign Up!</a>
                                 <a class="button button-primary facebook-button social-button" href="https://www.facebook.com/sudouc/">Facebook</a>
                                 <br><br>
@@ -153,7 +152,7 @@
                                         who does what.
                                     </p>
                                     <p>Here’s a just a few things we plan to do:</p>
-                                    <ul class="left fifth-pad-left">
+                                    <ul>
                                         <li>Society Tooling
                                             <ul>
                                                 <li>Member Management/Status/Renewal</li>
@@ -173,8 +172,6 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                    <p>Think you'd like to get involved?</p>
-                                    <a class="button button-primary" href="#">Contact Us</a>
                                 </div>
                             </center>
                         </div>
@@ -193,13 +190,14 @@
                 <div class="title">Background Layer</div>
             </div>-->
             <div class="parallax__layer parallax__layer--base white">
+                <a name="contact-anchor"></a>
             </div>
             <div class="parallax__layer parallax__layer--fore">
                 <div class="container center">
                     <div class="row">
                         <div class="six columns">
                             <h3>Contact</h3>
-                            <form id="contact-form">
+                            <form id="contact-form" class="">
                                 <fieldset>
                                     <input id="name-input" type="text" autocomplete="off" tabindex="0" name="Name" value="" placeholder="name" required>
                                 </fieldset>
@@ -222,6 +220,9 @@
                                     <input type="text" name="_gotcha" style="display:none" />
                                 </fieldset>
                             </form>
+                            <div id="sent-form" class="social-container hidden">
+                                <div id="sent-form-message">Thanks!</div>
+                            </div>
                         </div>
                         <div class="six columns">
                             <h3>Social</h3>
@@ -238,13 +239,14 @@
 
         <div id="group7" class="parallax__group">
             <div id="footer" class="parallax__layer parallax__layer--base">
-            </div>
-            <div class="parallax__layer parallax__layer--fore">
                 <div class="container center">
                     <div class="row">
                         <div class="twelve columns">
                             <center>
                                 <p>&copy; University of Canberra Student Developer Organisation 2016</p>
+                                <label for="debug-checkbox">
+                                    <span id="debug-lbl-footer">What's this parallax stuff??</span>
+                                    </label>
                             </center>
                         </div>
                     </div>
@@ -253,18 +255,18 @@
         </div>
     </div>
 
-    <script>
-        var debugInput = document.querySelector("input");
-        function updateDebugState() {
-            document.body.classList.toggle('debug-on', debugInput.checked);
-        }
-        debugInput.addEventListener("click", updateDebugState);
-        updateDebugState();
-    </script>
-
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="scripts/scrollDetect.js"></script>
     <script src="scripts/form.js"></script>
+
+    <script>
+        var debugInput = document.querySelector("#debug-checkbox");
+        function updateDebugState() {
+            $("body").toggleClass("debug-on");
+            $(".debug").toggleClass("hidden");
+        }
+        $("#debug-checkbox").change(updateDebugState);
+    </script>
 </body>
 
 </html>

@@ -63,7 +63,7 @@
 /* Debugger styles - used to show the effect
   --------------------------------------------- */
 
-.debug {
+.debug-on .debug {
     position: fixed;
     top: 0;
     right: .5em;
@@ -75,8 +75,8 @@
 }
 
 .debug-on .parallax__group {
-    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+    -webkit-transform: translate3d(50%, 0, -500px) rotateY(20deg);
+    transform: translate3d(50%, 0, -500px) rotateY(20deg);
 }
 
 .debug-on .parallax__layer {
@@ -85,8 +85,8 @@
 }
 
 .parallax__group {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 1s;
+    transition: transform 1s;
 }
 
 /* Basic Setups

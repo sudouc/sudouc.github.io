@@ -25,7 +25,6 @@ function submitForm(e) {
 
     // Checkout the data
     var formData = $("#contact-form").serializeObject();
-    console.info("Form Data: " + JSON.stringify(formData));
 
     $.ajax({
         url: formAPI,
@@ -33,6 +32,7 @@ function submitForm(e) {
         data: formData,
         dataType: "json"
     })
+    // NOTE: formspree doesn't actually respond, these are just here for if we need them later
         .done(function (data) {
             console.log("submitted: " + data);
             // Show the user the submission was successful
@@ -41,6 +41,11 @@ function submitForm(e) {
             console.error("error: " + xhr + " " + textStatus);
             // Show the user that there was an error
         });
+
+    // Hide the form and show a thanks
+    $("#contact-form").addClass("hidden");
+    $("#sent-form").removeClass("hidden");
+
 
     return false;
 }

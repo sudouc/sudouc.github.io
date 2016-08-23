@@ -20,67 +20,45 @@
     max-height: 100%;
     width: 30vh;
 }
-
 /*/JUMBOTRON*/
 
 /* First Content */
-
 #group2 {
     z-index: -1;
     /* In front of group1 */
     /*height: 50vh;*/
 }
-
-#group2 * {
-    /*border: 1px solid blue;*/
-}
-
 /* /First Content */
 
 /* First Space */
-
 #group3 {
     z-index: -100;
 }
-
 /* /First Space */
 
 /*About section on mobile*/
-
 #group-about-mobile {
     z-index: 0;
 }
-
 /*/About section on mobile*/
 
 /*First Space Mobile*/
-
 #group-about-mobile-space {
     z-index: -100;
 }
-
-/*/First space Mobile*/
+/*/First Space Mobile*/
 
 /* Second Content - Projects*/
-
 #group4 {
     z-index: -2;
     /*behind group2, in front of group3*/
 }
-
-#group4 * {
-    /*border: 1px solid brown;*/
-}
 /* /Second Content */
 
- /*Second Space*/
+/*Second Space*/
 #group5 {
     z-index: -100;
     /* slide under group 4 and 6 */
-}
-
-#group5 * {
-    /*border: 1px solid purple;*/
 }
 /*/Second Space */
 
@@ -89,31 +67,21 @@
     z-index: -3;
     /* slide under group 5 and 7 */
 }
-
-#group6 * {
-    /*border: 1px solid lightcoral;*/
-}
-
-#group6 .parallax__layer--back {
-    /*background: rgb(245,235,100);*/
-}
 /* /Third Content - Contact, Social & Footer */
+
+/*Footer Group*/
 #group7 {
     z-index: 0;
     /* slide over group 7 */
     height: 20vh;
 }
 
-#group7 * {
-    /*border: 1px solid turquoise;*/
-}
-
 #group7 .parallax__layer--base {
     background: #444444;
 }
+/*/Footer group*/
 
 /*Background styles*/
-
 .white {
     background: whitesmoke;
 }
@@ -149,9 +117,9 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
+/*/Background Styles*/
 
 /* Utility classes */
-
 .farBehind {
     z-index: -999 !important;
 }
@@ -172,13 +140,11 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
 }
 
 /*Mobile*/
-
 .above-mobile {
     display: none;
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-
 @media (min-width: 550px) {
     .above-mobile {
         display: block;
@@ -200,6 +166,16 @@ fieldset {
 
 .hidden{
     display: none;
+}
+
+#sent-form-message {
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    background-color: seagreen;
+    border: 1px solid green;
+    border-radius: 4px;
+    font-size: 200%;
 }
 
 /*Buttons*/
@@ -227,4 +203,8 @@ fieldset {
 /*Footer*/
 #footer {
     color: whitesmoke;
+}
+
+#debug-lbl-footer {
+    color: #4c4c4c;
 }
