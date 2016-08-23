@@ -75,8 +75,8 @@
 }
 
 .debug-on .parallax__group {
-    -webkit-transform: translate3d(50%, 0, -500px) rotateY(20deg);
-    transform: translate3d(50%, 0, -500px) rotateY(20deg);
+    -webkit-transform: translate3d(200px, 0, -500px) rotateY(20deg);
+    transform: translate3d(200px, 0, -500px) rotateY(20deg);
 }
 
 .debug-on .parallax__layer {
