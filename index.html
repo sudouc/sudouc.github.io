@@ -10,16 +10,18 @@
 
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/custom.css">
+
 </head>
 
 <body>
     <div class="debug">
-        <label><input type="checkbox" checked> Debug</label>
+        <label><input type="checkbox"> Debug</label>
     </div>
 
-    <div class="parallax">
+    <div class="parallax" id="parallax">
+
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--back">
                 <div id="jumbotron-content">
@@ -27,31 +29,48 @@
                         <div class="row">
                             <div class="six columns">
                                 <img id="jumbotron-logo" src="/images/sudo_logo_web.png">
-                                <h1>SUDO: Student Developer Organisation</h1>
                             </div>
                             <div class="six columns">
-                                <a class="button button-primary" href="#Î">Sign Up!</a>
+                                <h1>University of Canberra Student Developer Organisation</h1>
+                                <a class="button button-primary" href="https://www.facebook.com/events/228609840874073/">Sign Up!</a>
+                                <a class="button button-primary facebook-button social-button" href="https://www.facebook.com/sudouc/">Facebook</a>
+                                <br><br>
+                                <p>Our Business Plan is currently open for review:</p>
+                                <a class="button" href="https://paper.dropbox.com/doc/Student-Developer-Organisation-Business-Plan-gLNxHg1ryb98pBSx30j0B">Take A Look</a>
+                            </div>
+                        </div>
+                        <div class="row above-mobile">
+                            <div class="twelve columns">
+                                <center>
+                                    <div class="constrain-500px justify">
+                                        <h3>About Us</h3>
+                                        <p>SUDO is a new society at the University of Canberra, we’re focused on innovation,
+                                            planning & development and actual implementation in the technology sector.</p>
+                                        <p>We aim to be an entity to which members can belong and feel like they’re not on their
+                                            own in pursuing their projects or to connect them with existing projects.</p>
+                                        <p>While primarily for STEM students for obvious reasons we aim to impact the UC Community
+                                            as a whole through proposed campus interactivity and society tooling projects.</p>
+                                    </div>
+                                </center>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div class="parallax__layer parallax__layer--deep">
+            <div class="parallax__layer parallax__layer--deep carbon-fibre">
             </div>
+
         </div>
+
         <div id="group2" class="parallax__group">
-            <!--<div class="parallax__layer parallax__layer--deep">
-                Deep Background Layer
-            </div>-->
-            <div class="parallax__layer parallax__layer--back">
-                Background Layer
-            </div>
-            <div class="parallax__layer parallax__layer--base">
-                <div class="container">
+
+            <div class="parallax__layer parallax__layer--base white">
+                <div class="container center">
                     <div class="row">
                         <div class="twelve columns">
                             <center>
-                                <div class="constrain-500px">
+                                <div class="constrain-500px justify">
                                     <h3>Our Mission</h3>
                                     <p>To Develop. That’s it. Whether it’s your app, the next Facebook, or a less hackable Census,
                                         the UC Student Developer Organisation exists for you. </p>
@@ -70,36 +89,156 @@
                 </div>
             </div>
         </div>
-        <div id="group3" class="parallax__group">
-            <div class="parallax__layer parallax__layer--deep">
-                <div class="title">Deep Background Layer</div>
+
+        <div id="group3" class="parallax__group parallax__layer__space">
+
+            <div class="parallax__layer parallax__layer--deep blueprint">
+                <!--<div class="title">Deep Background Layer Group 3</div>-->
             </div>
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
-            </div>
-            <div class="parallax__layer parallax__layer--back">
-                <div class="title">Background Layer</div>
+                <!--<div class="title">Base Layer Group 3</div>-->
             </div>
         </div>
-        <div id="group5" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-                <div class="title">Foreground Layer</div>
+
+        <!--Mobile Only About section-->
+        <div id="group-about-mobile" class="parallax__group phablet-only">
+
+            <div class="parallax__layer parallax__layer--base white">
+                <div class="container center">
+                    <div class="row">
+                        <div class="twelve columns">
+                            <center>
+                                <div class="constrain-500px justify">
+                                    <h3>About Us</h3>
+                                    <p>SUDO is a new society at the University of Canberra, we’re focused on innovation, planning
+                                        & development and actual implementation in the technology sector.</p>
+                                    <p>We aim to be an entity to which members can belong and feel like they’re not on their
+                                        own in pursuing their projects or to connect them with existing projects.</p>
+                                    <p>While primarily for STEM students for obvious reasons we aim to impact the UC Community
+                                        as a whole through proposed campus interactivity and society tooling projects.</p>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="group-about-mobile-space" class="parallax__group parallax__layer__space phablet-only">
+
+            <div class="parallax__layer parallax__layer--deep blueprint">
+                <div class="title">Deep Background Layer Group 3</div>
             </div>
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+                <!--<div class="title">Base Layer Group 3</div>-->
             </div>
         </div>
+        <!--/Mobile Only About section-->
+
+
+        <div id="group4" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base white">
+                <div class="container center">
+                    <div class="row">
+                        <div class="twelve columns">
+                            <center>
+                                <div class="constrain-500px justify">
+                                    <h3>Projects</h3>
+                                    <p>SUDO is really new - we’re still in the stages of setting everything up and sorting out
+                                        who does what.
+                                    </p>
+                                    <p>Here’s a just a few things we plan to do:</p>
+                                    <ul class="left fifth-pad-left">
+                                        <li>Society Tooling
+                                            <ul>
+                                                <li>Member Management/Status/Renewal</li>
+                                                <li>Member messaging, sign up with social ID's and/or uni email</li>
+                                            </ul>
+                                        </li>
+                                        <li>Campus Interactivity
+                                            <ul>
+                                                <li>Piano Staircase</li>
+                                                <li>Streaming Campus Pianos</li>
+                                                <li>Campus mood lighting based on #weareuc</li>
+                                            </ul>
+                                        </li>
+                                        <li>Student Life
+                                            <ul>
+                                                <li>Free Period Matcher</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p>Think you'd like to get involved?</p>
+                                    <a class="button button-primary" href="#">Contact Us</a>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="group5" class="parallax__group parallax__layer__space">
+            <!--<div class="parallax__layer parallax__layer--deep blueprint">
+                <div class="title">Deep Background Layer Group 3</div>
+            </div>-->
+        </div>
+
         <div id="group6" class="parallax__group">
-            <div class="parallax__layer parallax__layer--back">
+            <!--<div class="parallax__layer parallax__layer--back">
                 <div class="title">Background Layer</div>
-            </div>
-            <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+            </div>-->
+            <div class="parallax__layer parallax__layer--base white">
+                <div class="container center">
+                    <div class="row">
+                        <div class="six columns">
+                            <h3>Contact</h3>
+                            <form id="contact-form">
+                                <fieldset>
+                                    <input id="name-input" type="text" autocomplete="off" tabindex="0" name="Name" value="" placeholder="name" required>
+                                </fieldset>
+
+                                <fieldset>
+                                    <input id="email-input" type="email" autocomplete="off" tabindex="0" name="Email" value="" placeholder="email" required>
+                                </fieldset>
+
+                                <fieldset>
+                                    <textarea id="message-input" tabindex="0" name="Message" placeholder="message" required></textarea>
+                                </fieldset>
+
+                                <fieldset>
+                                    <input class="button button-primary" type="submit" value="Submit">
+                                </fieldset>
+
+                                <fieldset>
+                                    <!--We are using formspree.io to send form data-->
+                                    <input type="hidden" name="_subject" value="New submission!" />
+                                    <input type="text" name="_gotcha" style="display:none" />
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="six columns">
+                            <h3>Social</h3>
+                            <div class="social-container">
+                                <a class="button button-primary facebook-button social-button" href="https://www.facebook.com/sudouc/">Facebook</a><br>
+                                <a class="button button-primary github-button social-button" href="https://github.com/sudouc/">GitHub</a><br>
+                                <a class="button button-primary email-button social-button" href="mailto:developers.uc@gmail.com">Email</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="group7" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+
+        <div id="group7" class="parallax__group parallax__layer__space">
+            <div id="footer" class="parallax__layer parallax__layer--base">
+                <div class="container center">
+                    <div class="row">
+                        <div class="twelve columns">
+                            <center>
+                                <p>&copy; University of Canberra Student Developer Organisation 2016</p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -111,8 +250,11 @@
         }
         debugInput.addEventListener("click", updateDebugState);
         updateDebugState();
-  </script>
+    </script>
 
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="scripts/scrollDetect.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>

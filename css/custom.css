@@ -1,22 +1,14 @@
-.center {
-    text-align: center;
-}
-
 /* Paralax Group Styling
   --------------------------------------------- */
 
 /*JUMBOTRON*/
 
 #group1 {
-    z-index: -500;
-    /* behind group 2 */
-    height: 70vh;
-    top: calc(70vh/-2);
+    z-index: -50;
 }
 
 #group1 * {
     color: white;
-    border: 1px solid red;
 }
 
 #jumbotron-content {
@@ -27,32 +19,18 @@
     width: 30vh;
 }
 
-#group1 .parallax__layer--deep {
-    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-}
-
 /*/JUMBOTRON*/
 
 /* First Content */
+
 #group2 {
-    z-index: 0;
-    height: 50vh;
+    z-index: -1;
     /* In front of group1 */
+    /*height: 50vh;*/
 }
 
 #group2 * {
-    border: 1px solid blue;
-}
-
-#group2 .parallax__layer--base {
-    background: whitesmoke;
+    /*border: 1px solid blue;*/
 }
 
 /* /First Content */
@@ -61,81 +39,190 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
 
 #group3 {
     z-index: -100;
-    /*behind group1 */
-    height: 25vh;
-    /*Quarter Viewport height*/
-}
-
-#group3 * {
-    border: 1px solid orange;
-}
-
-#group3 .parallax__layer--deep {
-    background: radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
-linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
-    background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
-    background-color: #840b2a;
 }
 
 /* /First Space */
 
-/* Second Content */
+/*About section on mobile*/
+
+#group-about-mobile {
+    z-index: 0;
+}
+
+/*/About section on mobile*/
+
+/*First Space Mobile*/
+
+#group-about-mobile-space {
+    z-index: -100;
+}
+
+/*/First space Mobile*/
+
+/* Second Content - Projects*/
 
 #group4 {
-    z-index: 0;
-    /*in front of group3*/
+    z-index: -2;
+    /*behind group2, in front of group3*/
 }
 
 #group4 * {
-    border: 1px solid brown;
+    /*border: 1px solid brown;*/
 }
-
-#group4 .parallax__layer--base {
-    background: brown;
-}
-
 /* /Second Content */
 
+ /*Second Space*/
 #group5 {
-    z-index: 0;
-    /* slide over group 4 and 6 */
+    z-index: -100;
+    /* slide under group 4 and 6 */
 }
 
 #group5 * {
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
 }
+/*/Second Space */
 
-#group5 .parallax__layer--base {
-    background: rgb(214,229,100);
-}
-
+/*Third Content - Contact, Social & Footer */
 #group6 {
-    z-index: 0;
+    z-index: -3;
     /* slide under group 5 and 7 */
 }
 
 #group6 * {
-    border: 1px solid lightcoral;
+    /*border: 1px solid lightcoral;*/
 }
 
 #group6 .parallax__layer--back {
-    background: rgb(245,235,100);
+    /*background: rgb(245,235,100);*/
 }
-
+/* /Third Content - Contact, Social & Footer */
 #group7 {
     z-index: 0;
     /* slide over group 7 */
+    height: 20vh;
 }
 
 #group7 * {
-    border: 1px solid turquoise;
+    /*border: 1px solid turquoise;*/
 }
 
 #group7 .parallax__layer--base {
-    background: rgb(255,241,100);
+    background: #444444;
+}
+
+/*Background styles*/
+
+.white {
+    background: whitesmoke;
+}
+
+.carbon-fibre {
+    background: -webkit-linear-gradient(297deg, #151515 5px, transparent 5px) 0 5px,
+-webkit-linear-gradient(117deg, #151515 5px, transparent 5px) 10px 0px,
+-webkit-linear-gradient(297deg, #222 5px, transparent 5px) 0px 10px,
+-webkit-linear-gradient(117deg, #222 5px, transparent 5px) 10px 5px,
+-webkit-linear-gradient(left, #1b1b1b 10px, transparent 10px),
+-webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -o-linear-gradient(297deg, #151515 5px, transparent 5px) 0 5px,
+-o-linear-gradient(117deg, #151515 5px, transparent 5px) 10px 0px,
+-o-linear-gradient(297deg, #222 5px, transparent 5px) 0px 10px,
+-o-linear-gradient(117deg, #222 5px, transparent 5px) 10px 5px,
+-o-linear-gradient(left, #1b1b1b 10px, transparent 10px),
+-o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(to right, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.blueprint {
+    background-color: #269;
+    background-image: -webkit-linear-gradient(white 2px, transparent 2px), -webkit-linear-gradient(left, white 2px, transparent 2px), -webkit-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), -webkit-linear-gradient(left, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-image: -o-linear-gradient(white 2px, transparent 2px), -o-linear-gradient(left, white 2px, transparent 2px), -o-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), -o-linear-gradient(left, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-image: linear-gradient(white 2px, transparent 2px), linear-gradient(to right, white 2px, transparent 2px), linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+/* Utility classes */
+
+.farBehind {
+    z-index: -999 !important;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/*Mobile*/
+
+.above-mobile {
+    display: none;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+
+@media (min-width: 550px) {
+    .above-mobile {
+        display: block;
+    }
+
+    .phablet-only {
+        display: none;
+    }
+}
+
+/*Form*/
+input, textarea{
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+}
+
+.hidden{
+    display: none;
+}
+
+/*Buttons*/
+.social-container {
+    padding : 0.35em 0.625em 0.75em;
+}
+.social-button {
+    min-width: 150px;
+    text-align: center;
+    border-color: rgba(0,0,0,0.2) !important;
+}
+.facebook-button {
+    background-color: #3b5998 !important;
+}
+
+.github-button {
+    background-color: #444444 !important;
+}
+
+.email-button {
+    color: black !important;
+    background-color: whitesmoke !important;
+}
+
+/*Footer*/
+#footer {
+    color: whitesmoke;
 }

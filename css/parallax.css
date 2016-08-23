@@ -47,9 +47,17 @@
 }
 
 .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
+    -webkit-transform: translateZ(-600px) scale(3.5);
+    transform: translateZ(-600px) scale(3.5);
     z-index: 2;
+}
+
+.parallax__layer__space {
+    height: 25vh;
+}
+
+.parallax__layer__space .parallax__layer--deep {
+    height: 120vh;
 }
 
 /* Debugger styles - used to show the effect
@@ -58,7 +66,7 @@
 .debug {
     position: fixed;
     top: 0;
-    left: .5em;
+    right: .5em;
     z-index: 999;
     background: rgba(0,0,0,.85);
     color: #fff;
@@ -73,7 +81,7 @@
 
 .debug-on .parallax__layer {
     box-shadow: 0 0 0 2px #000;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .parallax__group {
